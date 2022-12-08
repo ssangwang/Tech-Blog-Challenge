@@ -1,5 +1,11 @@
 const router = require('express').Router();
-const { Post, Comment } = require('../models');
+const { DataTypes } = require('sequelize');
+const { Post, Comment, User} = require('../models');
+
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes();
+var dateTime = date+' '+time;
 
 // GET all posts for homepage
 router.get('/', async (req, res) => {
@@ -51,6 +57,23 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+// CREATE ONE POST 
+router.post('/', async (req, res) => {
+  try {
+    await Post.create({
+      username: req.body.username,
+      title: req.body.title,
+      post_body: req.body.post,
+      post_date: dateTime,
+    }).then((newPost) => {
+      res.json(newPost);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 // Login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
@@ -61,3 +84,4 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+

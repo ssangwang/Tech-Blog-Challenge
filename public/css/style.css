@@ -146,6 +146,10 @@ img {
   padding-left: 100px;
 }
 
+.addPost {
+  display: flex;
+  justify-content: center;
+}
 /* LAYOUT */
 .container {
   display: flex;

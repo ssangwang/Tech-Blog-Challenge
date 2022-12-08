@@ -13,7 +13,6 @@ Comment.init(
     },
     user_name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     comment: {
       type: DataTypes.STRING,
@@ -29,6 +28,13 @@ Comment.init(
         model: 'post',
         key: 'id',
       },
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      }
     },
   },
   {

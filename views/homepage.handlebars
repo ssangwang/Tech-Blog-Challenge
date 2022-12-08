@@ -1,3 +1,15 @@
+<p style="display:flex;justify-content:center;font-weight:bold;">ADD A POST!</p>
+<form class="form post-form">
+<div class="addPost form-group">
+    <label for="add-title">Title:</label>
+    <input style="height:25px;width:100%;text-align:left;" class="form-input" type="text" id="add-title" />
+    <label for="add-post">What would you like to post?</label>
+    <input style="height:50px;width:100%;text-align:left;" class="form-input" type="text" id="add-post" />
+    <button class="btn btn-primary" type="submit">Add Post</button>
+</div>
+</form>
 {{#each posts as |post|}}
 {{> post-details}}
 {{/each}}
+
+<script src="./js/addpost.js"></script>
