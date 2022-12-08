@@ -1,10 +1,11 @@
 <section class="container">
   <h3 class="gallery-name">{{post.username}}</h3>
-  <h4>Please Log In to view posts!</h4>
+  <p>{{post.post_body}}</p>
+  <h4>Please Log In to view comments!</h4>
   <!-- If the user is logged in, render the gallery content -->
   {{#if loggedIn}}
   <section class="flex-row justify-center">
-    {{#each post.comment as |comment|}}
+    {{#each post.comments as |comment|}}
     {{> comment-details}}
     {{/each}}
   </section>
