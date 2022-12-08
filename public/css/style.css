@@ -1,10 +1,10 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
-  --light: #e3e4e3;
-  --dark: #182c23;
+  --primary: #C05746;
+  --secondary: #D0E3C4;
+  --tertiary: #ADC698;
+  --quatrinary: #FFFFFF;
+  --light: #FFFFFF;
+  --dark: #231F20;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -30,7 +30,6 @@ a:visited {
 
 header {
   padding: 40px;
-  text-align: center;
   background: var(--primary);
   color: var(--light);
 }
@@ -52,6 +51,7 @@ aside {
 nav {
   display: flex;
   background-color: var(--secondary);
+  justify-content: flex-end;
 }
 
 nav a {
@@ -70,10 +70,6 @@ nav a:hover {
   flex: 4;
   background-color: #fff;
   padding: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-no-style {
@@ -108,7 +104,6 @@ img {
 /* CARDS */
 .card {
   margin: 20px;
-  flex: 0 1 300px;
   border: 7px double var(--dark);
   border-radius: 10px;
   background-color: var(--light);
@@ -140,15 +135,11 @@ img {
 
 .card-body {
   font-size: 1.4rem;
-  text-align: center;
-  font-weight: bold;
 }
 
 .gallery-name {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px var(--secondary);
-  border: 10px groove var(--light);
+  border: 5px solid black;
+  border-radius: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 100px;
@@ -159,6 +150,5 @@ img {
 .container {
   display: flex;
   flex-flow: column wrap;
-  align-content: flex-start;
   align-items: center;
 }

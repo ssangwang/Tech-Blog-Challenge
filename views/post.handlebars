@@ -1,6 +1,8 @@
 <section class="container">
-  <h3 class="gallery-name">{{post.username}}</h3>
+  <div class="gallery-name">
+  <h3>{{post.username}}</h3>
   <p>{{post.post_body}}</p>
+  </div>
   <h4>Please Log In to view comments!</h4>
   <!-- If the user is logged in, render the gallery content -->
   {{#if loggedIn}}
